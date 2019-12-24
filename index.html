@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>从心预定</title>
+        <style type="text/css">
+        	*{
+            	margin: 0;
+            	padding: 0;
+        	}
+        	#top{
+        		height: 550px;
+        		background: url("img/banner.jpg") no-repeat;
+        		position: relative;
+        	}
+        	#topp{
+        		height: 50px;
+        		width: 1119px;
+        		padding: 5px 200px;
+        		background-color: rgba(0,0,0,0.3);
+        		position: absolute;
+        		top: 0;
+        	}
+        	#top img{
+        		float: left;
+        		margin-right: 20px;
+        	}
+        	#biao{
+        		padding: 10px 20px 10px 0px;
+        		font-size: 25px;
+        		font-family:'YouYuan';
+        		font-weight:bold;
+        		color: #FF8C00;
+        		float: left;
+        	}
+        	#zi{
+        		color: #ccc;
+        		margin: 420px 0px 0px 270px;
+        		display: inline-block;
+        		width: 800px;
+        		height: 60px;
+        		background-color: #fff;
+        		float: left;
+        	}
+        	#sea{
+        		height: 32px;
+        		width: 55px;
+        		color: #fff;
+        		padding: 14px 50px;
+        		font-size: 20px;
+        		margin-top: 420px;
+        		display: inline-block;
+        		background-color: rgba(255,140,0,1);
+        		float: left;
+        	}
+        	#zi img{
+        		padding: 13px;
+        	}
+        	#inp1{
+        		border: 0;
+        		border-right: 1px solid;
+        		margin-top: 5px;
+        		font-size: 20px;
+        		color: #ccc;
+        		width: 230px;
+        		height: 50px;
+        	}
+        	#inp2{
+        		border: 0;
+        		height: 50px;
+        		border-right: 1px solid;
+        		margin-top: 5px;
+        		font-size: 20px;
+        		color: #ccc;
+        	}
+        	select{
+        		width: 180px;
+        		padding: 10px 30px;
+        		border: 0;
+        		height: 50px;
+        		color: #ccc;
+        		font-size: 15px;
+        	}
+        	#top #right{
+        		display: inline-block;
+        		margin: 10px;
+        		font-size: 18px;        		
+        		float: right;
+        	}
+        	#top #right a{
+        		text-decoration:none;
+        		margin: 3px;
+        		color: #fff;
+        	}
+        	#mid{
+        		margin: 30px 200px;
+        		height: 1200px;
+        	}
+        	#mid0{
+        		text-align: center;
+        		font-size: 35px;
+        		padding-bottom: 20px;
+        		color: #FF8C00;
+        	}
+        	#midtop{
+        		margin: 20px;
+        	}
+        	.midtop1{
+        		text-align: center;
+        		margin: 5px;
+        		display: inline-block;
+        		padding: 15px 35px;
+        		font-size: 20px;
+        		font-weight:bold;
+        		width: 60px;
+        		height: 22px;
+        		border-radius: 30%;
+        		color: #fff;
+        		background-color: #FF8C00;
+        		border: 1px solid #FF8C00;
+        	}
+        	.midtop{
+        		text-align: center;
+        		margin: 5px;
+        		display: inline-block;
+        		padding: 15px 35px;
+        		font-size: 20px;
+        		font-weight:bold;
+        		width: 60px;
+        		height: 22px;
+        		border-radius: 30%;
+        		border: 1px solid #FF8C00;
+        	}
+        	#mid1{
+        		height: 350px;
+        	}
+        	.mid1{
+        		display: inline-block;
+        		margin: 0px 24px;
+        		position: relative;
+        	}
+        	.mid2{
+        		position: absolute;
+        		font-size: 30px;
+        		color: #fff;
+        		width: 225px;
+        		padding: 10px 0;
+        		height: 320px;
+        	}
+        	#midddtop{
+        		margin: 40px 0 30px 0;
+        		font-size: 30px;
+        		font-weight:bold;
+        	}
+        	.middd{
+        		display: inline-block;
+        		margin: 10px;
+        	}
+        	.middd img{
+        		height: 170px;
+        		width: 200px;
+        	}
+        	.middd1{
+        		margin: 10px 0;
+        		font-weight:bold;
+        	}
+        	.middd2{
+        		color: #aaa;
+        		font-size: 15px;
+        	}
+        	#muditop{
+        		margin: 40px 0 30px 0px;
+        		font-size: 30px;
+        		font-weight:bold;
+        	}
+        	#mudimid{
+        		height: 30px;
+        		border-bottom: 1px solid #FF8C00;
+        	}
+        	.mudimid1{
+        		display: inline-block;
+        		text-align: center;
+        		padding-top: 5px;
+        		height: 25px;
+        		width: 120px;
+        		color: #fff;
+        		background-color: #FF8C00;
+        	}
+        	.mudimid{
+        		display: inline-block;
+        		color: #777;
+        		width: 120px;
+        		height: 50px;
+        		text-align: center;
+        	}
+        	.mudi0{
+        		color: #FF8C00;
+        	}
+        	.mudi1{
+        		font-size: 13px;
+        		color: #999;
+        	}
+        	.mudi{
+        		width: 200px;
+        		display: inline-block;
+        		padding: 10px;
+        	}
+        	#bottom{
+        		height: 210px;
+        		background-color: #2e2e2e;
+        		color: #fff;
+        	}
+        	.f_top{
+        		color: #FF8C00;
+        		margin: 0px 150px 0px 150px;
+        		border-bottom: 1px solid #FFA500;
+        	}
+        	.f_mid{
+        		text-align: center;
+        		line-height: 37px;
+        		padding-top: 10px;
+        		font-size: 15px;
+        	}
+        	.f_bottom{
+        		text-align: center;
+        		line-height: 27px;
+        		font-size: 10px;
+        	}
+        	.topl{
+        		display: inline-block;
+        		padding-right: 200px;
+        	}
+        	.toplm{
+        		display: inline-block;
+               	}
+        	#top1{
+        		font-size: 20px;
+        		margin: 10px 0px 10px 0px;
+        	}
+        	.top2{
+        		font-size: 15px;
+        		margin: 10px 0px 10px 0px;
+        	}
+        	.side{
+        		position: fixed;
+        		bottom: 10px;
+        		right: 10px;
+        		background-color: rgba(0, 0, 0, 0.6);
+        		width: 50px;
+        	}
+        	.sider{
+        		height: 45px;
+        		width: 35px;
+        		border-bottom: 1.5px solid #606260;
+        		margin: 10px 5px 5px 8px;
+        	}
+        </style>
+    </head>
+    <body>
+    	<div id="top">
+    		<div id="topp">
+    			<img src="img/biao.png" width="55px" height="50px">
+    			<div id="biao">从心预定</div>
+    			<div id="right">
+    				<a href="">首页</a>
+    				<a href="">租车</a>
+    				<a href="">观光和活动</a>
+    				<a href="">登录</a>
+    				<a href="">注册</a>
+    				<a href="">帮助</a>
+    			</div>
+    		</div>
+    		<div id="zi">
+    				<img src="img/search.png" width="30px" height="30px">
+    				<input type="text" name="sec" value="目的地|景点|关键词" id="inp1">
+    				<input type="text" name="time" value="入住日期-退房日期" id="inp2">
+    				人数:
+    				<select name="older">
+    					<option value="one">不限</option>
+    					<option value="two">1</option>
+    					<option value="three">2</option>
+    					<option value="four">3</option>
+    					<option value="five">3+</option>
+    				</select>
+    		</div>
+    		<a href=""><div id="sea">搜索</div></a>
+    	</div>
+    	<div id="mid">
+    		<div id="mid0">当季热门</div>
+    		<div id="midtop">
+    			<a href=""><div class="midtop1">中国</div></a>
+    			<a href=""><div class="midtop">英国</div></a>
+    			<a href=""><div class="midtop">美国</div></a>
+    			<a href=""><div class="midtop">加拿大</div></a>
+    			<a href=""><div class="midtop">意大利</div></a>
+    			<a href=""><div class="midtop">法国</div></a>
+    			<a href=""><div class="midtop">更多</div></a>
+    		</div>
+    		<div id="mid1">
+    			<div class="mid1"><a href="">
+    				<div class="mid2">北京</div>
+    				<img src="img/mid0.jpg"></a></div>
+    			<div class="mid1"><a href="">
+    				<div class="mid2">上海</div>
+    				<img src="img/mid1.jpg"></a></div>
+    			<div class="mid1"><a href="">
+    				<div class="mid2">成都</div>
+    				<img src="img/mid2.jpg"></a></div>
+    			<div class="mid1"><a href="">
+    				<div class="mid2">杭州</div>
+    				<img src="img/mid3.jpg"></a></div>
+    		</div>
+    		<div id="muditop">热门目的地</div>
+    		<div id="mudimid">
+    			<a href=""><div class="mudimid1">区域</div></a>
+    			<a href=""><div class="mudimid">城市</div></a>
+    			<a href=""><div class="mudimid">周边地标/景点</div></a>
+    		</div>
+    		<div id="mudi">
+    			<a href=""><div class="mudi">
+    				<div class="mudi0">普吉府</div>
+    				<div class="mudi1">5，631家住宿</div>
+    			</div></a>
+    			<a href=""><div class="mudi">
+    				<div class="mudi0">台东</div>
+    				<div class="mudi1">1，033家住宿</div>
+    			</div></a>
+    			<a href=""><div class="mudi">
+    				<div class="mudi0">马六甲</div>
+    				<div class="mudi1">2，025家住宿</div>
+    			</div></a>
+    			<a href=""><div class="mudi">
+    				<div class="mudi0">新北市</div>
+    				<div class="mudi1">389家住宿</div>
+    			</div></a>
+    			<a href=""><div class="mudi">
+    				<div class="mudi0">巴淡岛</div>
+    				<div class="mudi1">293家住宿</div>
+    			</div></a>
+    			<a href=""><div class="mudi">
+    				<div class="mudi0">薄荷岛</div>
+    				<div class="mudi1">759家住宿</div>
+    			</div></a>
+    			<a href=""><div class="mudi">
+    				<div class="mudi0">巴厘岛</div>
+    				<div class="mudi1">12，326家住宿</div>
+    			</div></a>
+    			<a href=""><div class="mudi">
+    				<div class="mudi0">甲米府</div>
+    				<div class="mudi1">1，568家住宿</div>
+    			</div></a>
+    			<a href=""><div class="mudi">
+    				<div class="mudi0">济州岛</div>
+    				<div class="mudi1">158家住宿</div>
+    			</div></a>
+    			<a href=""><div class="mudi">
+    				<div class="mudi0">滨州市</div>
+    				<div class="mudi1">5，568家住宿</div>
+    			</div></a>
+    			<a href=""><div class="mudi">
+    				<div class="mudi0">民丹岛</div>
+    				<div class="mudi1">456家住宿</div>
+    			</div></a>
+    			<a href=""><div class="mudi">
+    				<div class="mudi0">苏梅岛</div>
+    				<div class="mudi1">256家住宿</div>
+    			</div></a>
+    			<a href=""><div class="mudi">
+    				<div class="mudi0">兰卡威</div>
+    				<div class="mudi1">25，568家住宿</div>
+    			</div></a>
+    			<a href=""><div class="mudi">
+    				<div class="mudi0">天津地区</div>
+    				<div class="mudi1">468家住宿</div>
+    			</div></a>
+    			<a href=""><div class="mudi">
+    				<div class="mudi0">金马伦高原</div>
+    				<div class="mudi1">789家住宿</div>
+    			</div></a>
+    		</div>
+    		<div id="midddtop">根据住宿类型浏览</div>
+    		<div id="middd">
+    			<div class="middd">
+    				<a href=""><img src="img/middd0.jpg"></a>
+    				<div class="middd1">公寓</div>
+    				<div class="middd2">766,445间公寓</div>
+    			</div>
+    			<div class="middd">
+    				<a href=""><img src="img/middd1.jpg"></a>
+    				<div class="middd1">度假村</div>
+    				<div class="middd2">21,257个度假村</div>
+    			</div>
+    			<div class="middd">
+    				<a href=""><img src="img/middd2.jpg"></a>
+    				<div class="middd1">别墅</div>
+    				<div class="middd2">399,445家别墅</div>
+    			</div>
+    			<div class="middd">
+    				<a href=""><img src="img/middd3.jpg"></a>
+    				<div class="middd1">木屋</div>
+    				<div class="middd2">766,495间木屋</div>
+    			</div>
+    			<div class="middd">
+    				<a href=""><img src="img/middd4.jpg"></a>
+    				<div class="middd1">乡村别墅</div>
+    				<div class="middd2">100,45栋乡村别墅</div>
+    			</div>
+    		</div>
+    	</div>
+    	<div id="bottom">
+    		<div class="f_top">
+    			<div class="topl">
+    				<div id="top1">国家/地区</div>
+    				<div class="top2">区域</div>
+    				<div class="top2">城市</div>
+    				<div class="top2">景点</div>
+    			</div>
+    			<div class="topl">
+    				<div id="top1">公寓</div>
+    				<div class="top2">别墅</div>
+    				<div class="top2">青旅</div>
+    				<div class="top2">度假村</div>
+    			</div>
+    			<div class="topl">
+    				<div id="top1">租车服务</div>
+    				<div class="top2">订机票</div>
+    				<div class="top2">餐厅定位</div>
+    				<div class="top2">周边景点</div>
+    			</div>
+    			<div class="topl">
+    				<div id="top1">论坛</div>
+    				<div class="top2">客人点评</div>
+    				<div class="top2">游记攻略</div>
+    				<div class="top2">旅人分享</div>
+    			</div>
+    			<div class="toplm">
+    				<div id="top1">关于我们</div>
+    				<div class="top2">网站故障报告</div>
+    				<div class="top2">联系我们</div>
+    				<div class="top2">投诉与建议</div>
+    			</div>
+    		</div>
+    		<div class="f_mid">
+    			首页&nbsp;&nbsp;|&nbsp;&nbsp;国家地区&nbsp;&nbsp;|&nbsp;&nbsp;
+    			租车订票&nbsp;&nbsp;|&nbsp;&nbsp;客服帮助&nbsp;&nbsp;|&nbsp;&nbsp;
+    			同行玩乐&nbsp;&nbsp;|&nbsp;&nbsp;旅行基金&nbsp;&nbsp;|&nbsp;&nbsp;
+    			法律服务&nbsp;&nbsp;|&nbsp;&nbsp;友情链接
+    		</div>
+    		<div class="f_bottom">
+    			2019-2020&nbsp;从心预定有限公司&nbsp;版权所有
+    		</div>
+    	</div>
+    	<div class="side">
+    			<div class="sider"><a href=""><img src="img/cart1.png"></a></div>
+    			<div class="sider"><a href=""><img src="img/qq.png"></a></div>
+    			<div class="sider"><a href=""><img src="img/zuji.png"></a></div>
+    			<div class="sider"><a href=""><img src="img/erweima.png"></a></div>
+    			<div class="sider"><a href=""><img src="img/gotop.png"></a></div>
+    	</div>
+    </body>
+    <script type="text/javascript">
+    	var a = document.getElementsByTagName("a");
+    	for(var i=0;i<6;i++){
+    		a[i].onmouseover = function(){
+    			this.style.color='#FF8C00';
+    		}
+    		a[i].onmouseout = function(){
+    			this.style.color='#fff';
+    		}
+    	}
+    	var sea = document.getElementById("sea");
+    	sea.onmouseover = function(){
+    		this.style.backgroundColor='rgba(255,215,0)';
+    	}
+    	sea.onmouseout = function(){
+    		this.style.backgroundColor='rgba(255,140,0)';
+    	}
+    	var mid2 = document.getElementsByClassName("mid2");
+    	for(var i=0;i<6;i++){
+    		mid2[i].onmouseover = function(){
+    			this.style.color='#FF8C00';
+    			this.style.fontSize='30px';
+    			this.style.backgroundColor='rgba(0, 0, 0, 0.5)';
+    		}
+    		mid2[i].onmouseout = function(){
+    			this.style.color='#fff';
+    			this.style.fontSize='20px';
+    			this.style.backgroundColor='rgba(0, 0, 0, 0)';
+    		}
+    	}
+    </script>
+</html>
