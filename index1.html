@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>住宿-从心预定</title>
+	<meta charset="utf-8">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#big{
+			padding: 0 180px;
+		}
+		#a a{
+			padding-left: 0;
+			float: left;
+			color: #0077cc;
+			font-size: small;
+		} 
+		#a p{
+			float: left;
+		}
+		#b{
+			height: 140px;
+			clear: both;
+			border-bottom: 1px solid #EDEDED;
+		}
+		#b #one{
+			color: #707070;
+		}
+		#b #two{
+			color: #707070;
+			font-weight: bold;
+		}
+		#b p{
+			font-size: small;
+		}
+		#b img{
+			width: 108px;
+			height: 57px;
+		}
+		#c{
+			float: right;
+		}
+		#c #p1 p{
+			margin-top: 10px;
+			font-weight: bold;
+		}
+		#c ul{
+			width: 700px;
+			border: 2px solid #FF8C00;
+			background-color: #FF8C00;
+		}
+		#c li{
+			margin: 10px;
+			font-size: 70%;
+			font-weight: bold;
+			color: 	black;
+			list-style: none;
+			display: inline-block;
+		}
+		#jiudian{
+			float: right;
+			height: 270px;
+			width: 700px;
+			margin-top: 15px;
+			border: 1px solid #C6C6C6;
+		}
+		#jiudian1{
+			float: right;
+			height: 270px;
+			width: 700px;
+			margin-top: 15px;
+			border: 1px solid #C6C6C6;
+			background-color: #E9F0FA;
+		}
+		#jiudian1 img{
+			width: 200px;
+			height: 200px;
+			float: left;
+			margin: 15px;
+		}
+		#jiudian1 #one h3{
+			color: #0077CC;
+			margin-top: 15px;
+		}
+		#jiudian1 #one p{
+			font-size: small;
+		}
+		#jiudian img{
+			width: 200px;
+			height: 200px;
+			margin: 15px;
+			float: left;
+		}
+		#jiudian #one h3{
+			color: #0077CC;
+			margin-top: 15px;
+		}
+		#jiudian #one p{
+			font-size: small;
+		}
+		#jiudian #bottom{
+			margin-left: 20px;
+			margin-top: 100px;
+			width: 674px;
+			height: 30px;
+			background-color: #CCE1FF;
+		}
+		#jiudian1 #bottom{
+			margin-left: 20px;
+			margin-top: 100px;
+			width: 674px;
+			height: 30px;
+			background-color: #CCE1FF;
+		}
+		#left{
+			height: 640px;
+			width: 310px;
+			background-color: #FFCC80;
+			float: left;
+		}
+		#left #top{
+			width: 300px;
+			height: 60px;
+			margin: 5px;
+			background-color: #FEBB02;
+		}
+		#left #top #p1{
+			font-size: 130%;
+			padding-left: 10px;
+			padding-top: 15px;
+		}
+		#left #p2{
+			margin-left: 10px;
+			margin-top: 30px;
+			font-size: small;
+		}
+		#left #p2 input{
+			border-radius: 5px;
+			width: 250px;
+			height: 30px;
+			border: 0;
+		}
+		#left #p2 select{
+			width: 250px;
+			height: 30px;
+			border: 0;
+			border-radius: 5px;
+		}
+		#left button{
+			margin-top: 30px;
+			margin-left: 15px;
+			background: #0077CC;
+			width: 120px;
+			height: 50px;
+			border-radius: 20px;
+			float: left;
+		}
+		#left #button p{
+			padding-top: 50px;
+			margin-left: 200px;
+		}
+		#minsu{
+			height: 270px;
+			width: 700px;
+			margin-top: 15px;
+			float: right;
+			border: 1px solid #C6C6C6;
+		}
+		#minsu1{
+			height: 270px;
+			width: 700px;
+			margin-top: 15px;
+			float: right;
+			border: 1px solid #C6C6C6;
+			background-color: #E9F0FA;
+		}
+		#minsu1 img{
+			width: 200px;
+			height: 200px;
+			float: left;
+			margin: 15px;
+		}
+		#minsu1 #one h3{
+			color: #0077CC;
+			margin-top: 15px;
+		}
+		#minsu1 #one p{
+			font-size: small;
+		}
+		#minsu img{
+			width: 200px;
+			height: 200px;
+			margin: 15px;
+			float: left;
+		}
+		#minsu #one h3{
+			color: #0077CC;
+			margin-top: 15px;
+		}
+		#minsu #one p{
+			font-size: small;
+		}
+		#minsu1 #bottom{
+			margin-left: 20px;
+			margin-top: 117px;
+			width: 674px;
+			height: 30px;
+			background-color: #CCE1FF;
+		}
+		#minsu #bottom{
+			margin-left: 20px;
+			margin-top: 100px;
+			width: 674px;
+			height: 30px;
+			background-color: #CCE1FF;
+		}
+		#sort2{
+			display: none;
+		}
+        #topp{
+            height: 50px;
+            padding: 5px 200px;
+            background-color: #FF8C00;
+        }
+        #topp img{
+            float: left;
+            margin-right: 20px;
+        }
+        #biao{
+            padding: 10px 20px 10px 0px;
+            font-size: 25px;
+            font-family:'YouYuan';
+            font-weight:bold;
+            color: white;
+            float: left;
+        }
+        #topp #right{
+            display: inline-block;
+            margin: 10px;
+            font-size: 18px;                
+            float: right;
+        }
+        #topp #right a{
+            text-decoration:none;
+            margin: 3px;
+            color: #fff;
+        }
+	</style>
+	</head>
+	<body>
+	<div id="topp">
+            <img src="images/logo.png" width="55px" height="50px">
+            <div id="biao">从心预定</div>
+                <div id="right">
+                    <a href="">首页</a>
+                    <a href="">租车</a>
+                    <a href="">观光和活动</a>
+                    <a href="login-0.html">登录</a>
+                    <a href="login-2.html">注册</a>
+                    <a href="">帮助</a>
+            	</div>
+            </div>
+	<div id="big">
+		<div id="zj">
+			<div id="a">
+				<a>首页&nbsp;&nbsp;&nbsp;</a>
+				<p>>&nbsp;&nbsp;</p>
+				<a>中国&nbsp;&nbsp;&nbsp;</a>
+				<p>>&nbsp;&nbsp;</p>
+				<a>北京地区&nbsp;&nbsp;&nbsp;</a>
+				<p>>&nbsp;&nbsp;</p>
+				<a>北京&nbsp;&nbsp;&nbsp;</a>
+				<p>>&nbsp;&nbsp;</p>
+				<p style="color:#707070">搜索结果</p>
+			</div>
+		</div>
+		<div id="b">
+			<h1>北京</h1>
+			<p><span id="one">网友推荐旅行主题：</span><span id="two">历史</span>、<span id="two">文化</span>、<span id="two">观光</span></p>
+			<p style="color: #707070;width:1050px;float:left">2008年夏季奥运会在北京盛大开幕，世界的目光在此聚焦，所有人都为之震撼。随着都市的现代化发展，北京的基础设施日益完善，美丽的绿地公园点缀其间。这座充满机遇的国际化大都市拥有2000多万人口，吸引了无数年轻人为梦想日夜奋斗。 颐和园靠近市中心，闹中取静，风景宜人。香山公园远离都市喧嚣，可以在此远眺京城的摩天大厦和涌动的车流。 你可以走进神秘的皇权核心—故宫，探索无数珍宝和历史故事，还有舌尖上的美食—麻辣劲爽的川菜等你来挑战。傍晚在后海搭一只小船，尽情享受迷人的京城夜景。</p>
+			<img src="images/map.png">
+		</div>
+		<div id="left">
+			<div id="top">
+				<div id="p1">
+					<p>境内外特价搜不停</p>
+				</div>
+				<div id="p2">
+					<p>目的地/住宿名称：</p>
+					<input value="北京">
+				</div>
+				<div id="p2">
+					<p>入住日期</p>
+					<form>
+						<select id="select1">
+							<option value="26">2019/12/26</option>
+							<option value="27">2019/12/27</option>
+							<option value="28">2019/12/28</option>
+							<option value="29">2019/12/29</option>
+							<option value="30">2019/12/30</option>
+							<option value="31">2019/12/31</option>
+						</select>
+					</form>
+				</div>
+				<div id="p2">
+					<p>退房日期</p>
+					<form>
+						<select id="select2">
+							<option value="27">2019/12/27</option>
+							<option value="28">2019/12/28</option>
+							<option value="29">2019/12/29</option>
+							<option value="30">2019/12/30</option>
+							<option value="31">2019/12/31</option>
+						</select>
+					</form>
+				</div>
+				<div id="p2">
+					<form>
+						<select id="select3">
+							<option value="1">1位</option>
+							<option value="2">2位</option>
+							<option value="3">3位</option>
+							<option value="4">4位</option>
+							<option value="5">5位</option>
+						</select>
+					</form>
+				</div>
+				<div id="p2">
+					<form>
+						<select id="select4">
+							<option value="1">1间房</option>
+							<option value="2">2间房</option>
+							<option value="3">3间房</option>
+							<option value="4">4间房</option>
+							<option value="5">5间房</option>
+						</select>
+					</form>
+				</div>
+				<div id="button">
+					<button id="btn1">查看价格</button>
+					<p id="sum"></p>
+				</div>
+			</div>
+		</div>
+		<div id="c">
+			<div id="p1">
+				<p>北京：共1,017家住宿</p>
+			</div>
+			<div id="one">
+				<ul>
+					<li><a>热门推荐</a></li>
+					<li><a >民宿短租优先</a></li>
+					<li><a>优先显示低价住宿</a></li>
+					<li><a>住宿评级</a></li>
+					<li><a>评级和价格</a></li>
+					<li><a>距离市中心</a></li>
+					<li><a>高点评分数及数量</a></li>
+					<li><a>…</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="sort1">
+			<div id="jiudian">
+				<div id="tu">
+					<img src="images/huaqiao.jpg">
+				</div>
+				<div id="one">
+					<h3 id="click">北京华侨大厦</h3>
+					<p>尊贵型</p>
+				</div>
+				<p style="font-size: small;color:#0077CC">东城区，北京显示在地图上,离中心地区2km</p>
+				<p style="font-size: small">北京华侨大厦位于王府井大街，提供5个餐饮场所、室内游泳池和免费停车场。客房提供免费WiFi，享有市景。酒店距离嘉德艺术中心和中国美术馆均有5分钟步行路程。</p>
+				<div id="bottom">
+					<p>觉得<span style="font-weight: bold">北京华侨大厦</span>还不错？那就赶快输入日期预订吧！</p>
+				</div>
+			</div>
+			<div id="jiudian">
+				<img src="images/liting.jpg">
+				<div id="one">
+					<h3>北京丽亭酒店</h3>
+					<p>豪华型</p>
+				</div>
+				<p style="font-size: small;color:#0077CC">东城区，北京显示在地图上,离中心地区2.5km</p>
+				<p style="font-size: small">北京丽亭酒店提供现代奢华的环境，距离天安门广场和故宫有不到13分钟的车程，距离灯市口地铁站（5号线）仅有数步之遥，配有3处餐饮场所、免费网络连接和健身房。</p>
+				<div id="bottom">
+					<p>觉得<span style="font-weight: bold">北京丽亭酒店</span>还不错？那就赶快输入日期预订吧！</p>
+				</div>
+			</div>
+			<div id="jiudian">
+				<img src="images/dongzhimen.jpg">
+				<div id="one">
+					<h3>北京东直门智选假日酒店</h3>
+					<p>豪华型</p>
+				</div>
+				<p style="font-size: small;color:#0077CC">朝阳区，北京显示在地图上,离中心地区5km</p>
+				<p style="font-size: small">北京东直门智选假日酒店地理位置优越，位于使馆区，距离热门的三里屯酒吧街约有15分钟步行路程，拥有带网络连接的时尚客房。客人可以免费使用健身中心，并可免费使用按摩椅。</p>
+				<div id="bottom">
+					<p>觉得<span style="font-weight: bold">北京东直门智选假日酒店</span>还不错？那就赶快输入日期预订吧！</p>
+				</div>
+			</div>
+		</div>
+		<div id="sort2">
+			<div id="minsu">
+				<div id="tu">
+					<img src="images/lidu.jpg">
+				</div>
+				<div id="one">
+					<h3>北京丽都服务式公寓</h3>
+					<p>豪华型</p>
+				</div>
+				<p style="font-size: small;color:#0077CC">朝阳区，北京显示在地图上,离中心地区10km</p>
+				<p style="font-size: small">北京丽都服务式公寓位于朝阳区，提供带设备齐全的厨房和免费WiFi的自助式公寓。客人还可以免费使用室内游泳池。公寓距离望京南站和将台站均不到1公里。</p>
+				<div id="bottom">
+					<p>觉得<span style="font-weight: bold">北京丽都服务式公寓</span>还不错？那就赶快输入日期预订吧！</p>
+				</div>
+			</div>
+			<div id="minsu">
+				<img src="images/jinze.jpg">
+				<div id="one">
+					<h3>北京东方金泽大酒店</h3>
+					<p>豪华型</p>
+				</div>
+				<p style="font-size: small;color:#0077CC">东城区，北京显示在地图上,离中心地区4.7km</p>
+				<p style="font-size: small">北京东方金泽大酒店距离簋街400米，距离东直门地铁站仅有几步之遥，提供空调和热水浴池，距离雍和宫有1.6公里。 酒店距离银座购物中心和来福士购物中心仅有短短的2分钟车程。</p>
+				<div id="bottom">
+					<p>觉得<span style="font-weight: bold">北京东方金泽大酒店</span>还不错？那就赶快输入日期预订吧！</p>
+				</div>
+			</div>
+			<div id="minsu">
+				<img src="images/liyuan.jpg">
+				<div id="one">
+					<h3>北京丽苑公寓</h3>
+					<p>尊贵型</p>
+				</div>
+				<p style="font-size: small;color:#0077CC">朝阳区，北京显示在地图上,离中心地区5km</p>
+				<p style="font-size: small">北京丽苑公寓提供设备齐全的公寓，公寓享有景山、北海公园和紫禁城的景致。公寓距离王府井购物街仅有320米，提供覆盖各处的免费高速WiFi。 北京丽苑公寓距离北京首都国际机场仅有45分钟车程。</p>
+				<div id="bottom">
+					<p>觉得<span style="font-weight: bold">北京丽苑公寓</span>还不错？那就赶快输入日期预订吧！</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	</body>
+	<script>		
+		var j=0;
+		var i=0;
+		var sum;
+		var liList=document.getElementsByTagName("li");
+		var jiudian=document.getElementById("jiudian");
+		var select1=document.getElementById("select1");
+		var select2=document.getElementById("select2");
+		var select3=document.getElementById("select3");
+		var select4=document.getElementById("select4");
+		var bn1=document.getElementById("btn1");
+		var sum1=document.getElementById("sum");
+		var minsu=document.getElementById("minsu");
+		var sort1=document.getElementById("sort1");
+		var sort2=document.getElementById("sort2");
+		var click1=document.getElementById("click");
+		var h3List=document.getElementsByTagName("h3");
+		liList[0].onclick=function(){
+			jiudian.setAttribute("id","jiudian1");
+			this.style.color="white";
+			sort2.style.display="none";
+			sort1.style.display="block";
+			liList[1].style.color="black";
+		}
+		liList[1].onclick=function(){
+			liList[0].style.color="black";
+			this.style.color="white";
+			minsu.setAttribute("id", "minsu1");
+			sort1.style.display="none";
+			sort2.style.display="block";
+		}
+		sum=500*parseInt(select3.value)*parseInt(select4.value)*parseInt(select2.value)-500*parseInt(select3.value)*parseInt(select4.value)*parseInt(select1.value);
+		btn1.onclick=function(){
+			sum1.innerHTML=sum+"元";
+		}
+		h3List[0].onclick=function(){
+			window.location.href="renwu08.html";
+		}
+		h3List[1].onclick=function(){
+			window.location.href="renwu08.html";
+		}
+		h3List[2].onclick=function(){
+			window.location.href="renwu08.html";
+		}
+		h3List[3].onclick=function(){
+			window.location.href="renwu08.html";
+		}
+	</script>
+	</html>
