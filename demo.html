@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>伦敦64大必玩必看 - 从心预订</title>
+        <style type="text/css">
+        	*{
+            	margin: 0;
+            	padding: 0;
+        	}
+        	a{
+        		text-decoration:none;
+        		color: #000;
+        	}
+        	#top{
+        		height: 500px;
+        		background: url("img/img1.jpg") no-repeat;
+        		background-size: 100% 170%;
+        		position: relative;
+        		overflow: hidden;
+        	}
+        	#top img{
+        		float: left;
+        		margin-top: -3px;
+        		margin-right: 20px;
+        	}
+        	#nav{
+        		height: 50px;
+        		width: 1120px;
+        		padding: 5px 200px;
+        		background-color: rgba(0,0,0,0.3);
+        		position: absolute;
+        		top: 0;
+        	}
+        	#logo{
+        		padding: 10px 20px 10px 0px;
+        		font-size: 25px;
+        		font-family:'YouYuan';
+        		font-weight:bold;
+        		color: #FF8C00;
+        		float: left;
+        	}
+        	#top #right{
+        		display: inline-block;
+        		margin: 10px;
+        		font-size: 18px;        		
+        		float: right;
+        	}
+        	#top #right a{
+        		text-decoration:none;
+        		margin: 3px;
+        		color: #fff;
+        	}
+        	.placeName{
+        		padding-top: 100px;
+        		text-align: center;
+        		font-size: 150px;
+        		color: #fff;
+        	}
+        	.search{
+        		padding-top: 100px;
+        		text-align: center;
+        	}
+        	.inp{
+        		padding-left: 80px;
+        		width: 800px;
+        		height: 60px;
+        		line-height: 80px;
+        		background: rgba(0,0,0,0.5);
+        		background-image: url(img/fangdajing.png);
+        		background-size: 50px 40px;
+        		background-repeat: no-repeat;
+        		background-position: 20px;
+        		border: 1px solid #ccc;
+        		border-radius: 30px;
+        		font-size: 25px;
+        		color: #aaa;
+        		outline: none;
+        	}
+        	.container{
+		    	margin: 0 auto;
+		    	width: 1300px;
+		    	padding-top: 30px;
+		    	border-bottom: 2px solid #aaa;
+			}
+			.guide{
+		    	width: 500px;
+		    	height: 200px;
+		    	float: left;
+		    	top: 30px;
+			}
+			.guide h1{
+		    	color: #000;
+			}
+			.guide p{
+				font-size: 20px;
+		    	color: #444;
+			}
+			.main{
+		    	width: 790px;
+		    	float: right;
+		    	top: -300px;
+			}
+			.hot1{
+				display: inline-block;
+				width: 370px;
+				height: 310px;
+				margin-left: 20px;
+				margin-right: 20px;
+				margin-top: -90px;
+        		overflow: hidden;
+			}
+			.hot1 img{
+				width: 370px;
+				height: 200px;
+			}
+			.msg{
+				width: 370px;
+				height: 100px;
+				position: relative;
+				top: 310px;
+				background-color: rgba(200,200,200,0.5);
+				text-align: center;
+				padding-top: 10px;
+			}
+			.hot2{
+				border-bottom: 2px solid #aaa;
+				display: inline-block;
+				width: 300px;
+				height: 70px;
+				padding-top: 5px;
+				margin: 10px;
+				background-image: url(img/jiantou.png);
+        		background-size: 40px 40px;
+        		background-repeat: no-repeat;
+        		background-position: 230px 15px;
+        		border-radius: 35px;
+			}
+			.hot2 h2{
+				color: #111;
+			}
+			.hot2 p{
+				font-size: 20px;
+				color: #222;
+			}
+			.hot3{
+				display: inline-block;
+				width: 450px;
+				height: 200px;
+				background-image: url(img/xiaojiantou.png);
+        		background-size: 40px 40px;
+        		background-repeat: no-repeat;
+        		background-position: 400px 110px;
+        		margin-left: 20px;
+        		margin-right: 20px;
+			}
+			.hot3 img{
+				width: 170px;
+				height: 150px;
+				margin-right: 10px;
+			}
+			.hot3 div{
+				width: 270px;
+				height: 200px;
+				display: inline-block;
+				float: right;
+				padding-top: 10px;
+			}
+			.more{
+				width: 1300px;
+		    	height:80px;
+		    	text-align: center;
+		    	display: inline-block;
+		    	position: relative;
+		    	bottom: 20px;
+			}
+			.btn{
+				width: 500px;
+		    	height: 60px;
+		    	background-color: #fff;
+		    	border: 2px solid #FF8C00;
+		    	border-radius: 10px;
+		    	color: #FF8C00;
+		    	font-size: 20px;
+        		outline: none;
+        		cursor: pointer;
+			}
+        	#bottom{
+        		height: 210px;
+        		background-color: #2e2e2e;
+        		color: #fff;
+        	}
+        	.f_top{
+        		color: #FF8C00;
+        		margin: 0px 150px 0px 150px;
+        		border-bottom: 1px solid #FFA500;
+        	}
+        	.f_mid{
+        		text-align: center;
+        		line-height: 37px;
+        		padding-top: 10px;
+        		font-size: 15px;
+        	}
+        	.f_bottom{
+        		text-align: center;
+        		line-height: 27px;
+        		font-size: 10px;
+        	}
+        	.topl{
+        		display: inline-block;
+        		padding-right: 200px;
+        	}
+        	.toplm{
+        		display: inline-block;
+               	}
+        	#top1{
+        		font-size: 20px;
+        		margin: 10px 0px 10px 0px;
+        	}
+        	.top2{
+        		font-size: 15px;
+        		margin: 10px 0px 10px 0px;
+        	}
+        	.side{
+        		position: fixed;
+        		bottom: 10px;
+        		right: 10px;
+        		background-color: rgba(0, 0, 0, 0.6);
+        		width: 50px;
+        	}
+        	.sider{
+        		height: 45px;
+        		width: 35px;
+        		border-bottom: 1.5px solid #606260;
+        		margin: 10px 5px 5px 8px;
+        	}
+        </style>
+    </head>
+    <body>
+    	<div id="top">
+	    	<div id="nav">
+	    		<img src="img/logo.png" width="55px" height="55px">
+	   			<div id="logo">从心预定</div>
+	   			<div id="right">
+	   				<a href="index.html">首页</a>
+	   				<a href="#">租车</a>
+    				<a href="big.html">观光和活动</a>
+	    			<a href="login-0.html">登录</a>
+	    			<a href="login-2.html">注册</a>
+	    			<a href="#">帮助</a>
+	    		</div>
+	   		</div>
+	    	<div class="placeName">
+	   			伦敦
+	    	</div>
+	   		<div class="search">
+	    		<input type="text" name="" class="inp" value="搜索博物馆、观光体验、自行车租赁……">
+	   		</div>
+    	</div>
+    	<div id="mid">
+    		<div class="container">
+    			<div class="guide" style="width: 400px;">
+    				<h1>伦敦推荐</h1>
+    				<p>我们为你选出了伦敦的热门游玩体验</p>
+    			</div>
+    			<div class="main" style="width: 890px;height: 500px;">
+    				<a href="" class="hot1">
+    					<div class="msg">
+    						<h3>威斯敏斯特大教堂门票及多媒体指南</h3>
+	    					<p>通过多媒体导览游览英国历史上最著名的地标之一一威斯敏斯特大教堂</p>
+	    					<h3>£21</h3>
+	    					<p></p>
+    					</div>
+    					<img src="img/bimg1.png">
+    				</a>
+    				<a href="" class="hot1">
+    					<div class="msg">
+    						<h3>带导游的温布利球场之旅</h3>
+	    					<p>英国最大的体育及音乐场地幕后之旅</p>
+	    					<h3 style="display:inline;">£12.75</h3>
+	    					<p style="display:inline;text-decoration:line-through;">£17</p>
+    					</div>
+    					<img src="img/bimg2.png">
+    				</a>
+    				<a href="" class="hot1">
+    					<div class="msg">
+    						<h3>泰晤士河巴士和阿联酋航空公司缆车</h3>
+	    					<p>在水上参观伦敦的亮点，乘坐缆车驶过泰晤士河上方</p>
+	    					<h3 style="display:inline;">£15.70</h3>
+	    					<p style="display:inline;text-decoration:line-through;">£20.70</p>
+    					</div>
+    					<img src="img/bimg3.png">
+    				</a>
+    				<a href="" class="hot1">
+    					<div class="msg">
+    						<h3>哈利波特制作游览活动</h3>
+	    					<p>参观华纳兄弟工作室和牛津大学并观看霍格沃茨的神奇世界被唤醒</p>
+	    					<h3 style="display:inline;">£103.55</h3>
+	    					<p style="display:inline;text-decoration:line-through;">£109</p>
+    					</div>
+    					<img src="img/bimg4.png">
+    				</a>
+    			</div>
+    			<div class="more">
+    				<a href="#">
+    					<button class="btn">查看所有推荐</button>
+    				</a>
+    			</div>
+    		</div>
+    		<div class="container" style="height: 300px;">
+    			<div class="guide">
+    				<h1>按主题类别探索</h1>
+    				<p>活动、景点、观光团、交通....各种类别任你搜</p>
+    			</div>
+    			<div class="main" style="height: 230px;">
+    				<a href="#">
+	    				<div class="hot2">
+	    					<img src="img/simg1.png" style="width:60px;height:60px;float: left;margin-right: 20px;">
+	    					<h2>观光游览</h2>
+	    					<p>37项</p>
+	    				</div>
+    				</a>
+    				<a href="#">
+	    				<div class="hot2">
+	    					<img src="img/simg2.png" style="width:60px;height:60px;float: left;margin-right: 20px;">
+	    					<h2>博物馆</h2>
+	    					<p>14项</p>
+	    				</div>
+    				</a>
+    				<a href="#">
+	    				<div class="hot2">
+	    					<img src="img/simg3.png" style="width:60px;height:60px;float: left;margin-right: 20px;">
+	    					<h2>亲子&游乐</h2>
+	    					<p>7项</p>
+	    				</div>
+    				</a>
+    				<a href="#">
+	    				<div class="hot2">
+	    					<img src="img/simg4.png" style="width:60px;height:60px;float: left;margin-right: 20px;">
+	    					<h2>食品&饮料</h2>
+	    					<p>3项</p>
+	    				</div>
+    				</a>
+    			</div>
+    			<div class="more">
+    				<a href="#">
+    					<button class="btn">查看所有类别</button>
+    				</a>
+    			</div>
+    		</div>
+    		<div class="container">
+    			<div class="guide" style="width: 260px;">
+    				<h1>伦敦必玩必看</h1>
+    				<p>看看伦敦不可错过的旅行体验</p>
+    			</div>
+    			<div class="main" style="width: 1000px;">
+    				<a href="#" class="hot3">
+    					<img src="img/bimg1.png">
+    					<div>
+    						<h3>威斯敏斯特大教堂门票及多媒体指南</h3>
+		    				<p>通过多媒体导览游览英国历史上最著名的地标之一一威斯敏斯特大教堂</p>
+		    				<h3>£21</h3>
+		    				<p></p>
+    					</div>
+    				</a>
+    				<a href="#" class="hot3">
+    					<img src="img/bimg2.png">
+    					<div>
+	    					<h3>带导游的温布利球场之旅</h3>
+		    				<p>英国最大的体育及音乐场地幕后之旅</p>
+		    				<h3 style="display:inline;">£12.75</h3>
+		    				<p style="display:inline;text-decoration:line-through;">£17</p>
+		    			</div>
+    				</a>
+    				<a href="#" class="hot3">
+    					<img src="img/bimg3.png">
+    					<div>
+	    					<h3>泰晤士河巴士和阿联酋航空公司缆车</h3>
+		    				<p>在水上参观伦敦的亮点，乘坐缆车驶过泰晤士河上方</p>
+		    				<h3 style="display:inline;">£15.70</h3>
+		    				<p style="display:inline;text-decoration:line-through;">£20.70</p>
+		    			</div>
+    				</a>
+    				<a href="#" class="hot3">
+    					<img src="img/bimg4.png">
+    					<div>
+	    					<h3>哈利波特制作游览活动</h3>
+		    				<p>参观华纳兄弟工作室和牛津大学并观看霍格沃茨的神奇世界被唤醒</p>
+		    				<h3 style="display:inline;">£103.55</h3>
+		    				<p style="display:inline;text-decoration:line-through;">£109</p>
+		    			</div>
+    				</a>
+    			</div>
+    			<div class="more">
+    				<a href="#">
+    					<button class="btn">查看所有选项</button>
+    				</a>
+    			</div>
+    		</div>
+    	</div>
+    	<div id="bottom">
+    		<div class="f_top">
+    			<div class="topl">
+    				<div id="top1">国家/地区</div>
+    				<div class="top2">区域</div>
+    				<div class="top2">城市</div>
+    				<div class="top2">景点</div>
+    			</div>
+    			<div class="topl">
+    				<div id="top1">公寓</div>
+    				<div class="top2">别墅</div>
+    				<div class="top2">青旅</div>
+    				<div class="top2">度假村</div>
+    			</div>
+    			<div class="topl">
+    				<div id="top1">租车服务</div>
+    				<div class="top2">订机票</div>
+    				<div class="top2">餐厅定位</div>
+    				<div class="top2">周边景点</div>
+    			</div>
+    			<div class="topl">
+    				<div id="top1">论坛</div>
+    				<div class="top2">客人点评</div>
+    				<div class="top2">游记攻略</div>
+    				<div class="top2">旅人分享</div>
+    			</div>
+    			<div class="toplm">
+    				<div id="top1">关于我们</div>
+    				<div class="top2">网站故障报告</div>
+    				<div class="top2">联系我们</div>
+    				<div class="top2">投诉与建议</div>
+    			</div>
+    		</div>
+    		<div class="f_mid">
+    			首页&nbsp;&nbsp;|&nbsp;&nbsp;国家地区&nbsp;&nbsp;|&nbsp;&nbsp;
+    			租车订票&nbsp;&nbsp;|&nbsp;&nbsp;客服帮助&nbsp;&nbsp;|&nbsp;&nbsp;
+    			同行玩乐&nbsp;&nbsp;|&nbsp;&nbsp;旅行基金&nbsp;&nbsp;|&nbsp;&nbsp;
+    			法律服务&nbsp;&nbsp;|&nbsp;&nbsp;友情链接
+    		</div>
+    		<div class="f_bottom">
+    			2019-2020&nbsp;从心预定有限公司&nbsp;版权所有
+    		</div>
+    	</div>
+    	<div class="side">
+    			<div class="sider"><a href=""><img src="img/cart1.png"></div></a>
+    			<div class="sider"><a href=""><img src="img/qq.png"></div></a>
+    			<div class="sider"><a href=""><img src="img/zuji.png"></div></a>
+    			<div class="sider"><a href=""><img src="img/erweima.png"></div></a>
+    			<div class="sider"><a href=""><img src="img/gotop.png"></div></a>
+    	</div>
+    </body>
+	<script src="./animate.js"></script>
+    <script type="text/javascript">
+    	var a = document.getElementsByTagName("a");
+    	var inp = document.getElementsByTagName("input")[0];
+    	var hot1 = document.getElementsByClassName("hot1");
+    	var hot2 = document.getElementsByClassName("hot2");
+    	a[2].style.color='#FF8C00';
+    	for(var i=0;i<6;i++){
+    		a[i].onmouseover = function(){
+    			for(var i=0;i<6;i++){
+    				a[i].style.color='#fff';
+    			}
+    			this.style.color='#FF8C00';
+    		}
+    		a[i].onmouseout = function(){
+    			this.style.color='#fff';
+    			a[2].style.color='#FF8C00';
+    		}
+    	}
+    	inp.onclick = function(){
+    		this.value="";
+    	}
+    	inp.onblur = function(){
+    		if(this.value == ""){
+    			this.value="搜索博物馆、观光体验、自行车租赁……";
+    		}
+    	}
+    	for(var i=0;i<4;i++){
+    		hot1[i].onmouseover = function(){
+    			animate(this.firstElementChild,{top:200});
+    		}
+    		hot1[i].onmouseout = function(){
+    			animate(this.firstElementChild,{top:370});
+    		}
+    	}
+    	for(var i=0;i<4;i++){
+    		hot2[i].onmouseover = function(){
+    			this.style.backgroundColor="#ddd";
+    		}
+    		hot2[i].onmouseout = function(){
+    			this.style.backgroundColor="#fff";
+    		}
+    	}
+		function getStyle(obj, attr){
+			if(obj.currentStyle){
+				return obj.currentStyle[attr];
+			} else {
+				return getComputedStyle(obj, null)[attr];
+			}
+		}
+		function animate(obj,json,callback){
+			clearInterval(obj.timer);
+			obj.timer = setInterval(function(){
+				var isStop = true;
+				for(var attr in json){
+					var now = 0;
+					if(attr == 'opacity'){
+						now = parseInt(getStyle(obj,attr)*100);
+					}else{
+						now = parseInt(getStyle(obj,attr));
+					}
+					var speed = (json[attr] - now) / 8;
+					speed = speed>0?Math.ceil(speed):Math.floor(speed);
+					var cur = now + speed;
+					if(attr == 'opacity'){
+						obj.style[attr] = cur / 100;
+					}else{
+						obj.style[attr] = cur + 'px';
+					}
+					if(json[attr] !== cur){
+						isStop = false;
+					}
+				}
+				if(isStop){
+					clearInterval(obj.timer);
+					callback&&callback();
+				}
+			}, 30)
+		}
+    </script>
+</html>
