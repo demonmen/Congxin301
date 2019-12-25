@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>观光和活动</title>
+        <style type="text/css">
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .top{
+                width:1519px;
+                height: 550px;
+            }
+            #t1{
+                height: 60px;
+                width: 1119px;
+                padding: 5px 200px;
+                background-color: #2e2e2e;
+                position: absolute;
+                top: 0;
+            }
+            #t2{
+                width: 1519px;
+                height: 500px;
+                margin: 55px auto;
+                position: relative;
+                overflow: hidden;
+            }
+             ul,li{
+                list-style: none;
+                text-align: center;
+                position: relative;
+            }
+            .slider{
+                width: 10633px;
+                position: absolute;
+                left: -1519px;
+            }
+            .slide{
+                width: 1519px;
+                overflow: hidden;
+                float: left;
+            } 
+            .slide>img{
+                width: 1519px;
+                height: 500px;
+            }
+            #t2>span{
+                display: block;
+                width: 30px;
+                height: 50px;
+                text-align: center;
+                cursor: pointer;
+                color: #ccc;
+                top: 175px;
+                line-height: 50px;
+                background: rgb(255,0,0);
+                font-size: 30px;
+                position: absolute;
+                opacity: 0.6;
+            }
+            #left{
+                left: 30px;
+            }
+            #right{
+                right: 30px;
+            }
+            .nav{
+                position: absolute;
+                bottom: 20px;
+                margin-left: 680px;
+            }
+            .nav>li{
+                float: left;
+                width: 20px;
+                height: 20px;
+                background: #ccc;
+                cursor: pointer;
+                margin: 0 10px;
+                border-radius: 50%;
+
+            }
+            .nav .active{
+                background: red;
+            }
+            #biao{
+                padding: 5px 20px 10px 0px;
+                font-size: 25px;
+                font-family:'YouYuan';
+                font-weight:bold;
+                color: #FF8C00;
+                float: left;
+            }
+            #t1 img{
+                float: left;
+                margin-right: 20px;
+            }
+            #mid{
+                width:1200px;
+                height: 1600px;
+                margin: 0px auto;
+            }
+            #mid1{
+                width:1200px;
+                height: 50px;
+            }
+            #mid11{
+                width: 200px;
+                height: 40px;
+                margin-left: 30px;
+                margin-top: 5px;
+            }
+            #mid2{
+                width:1200px;
+                height: 330px;
+            }
+            .img1,.img2,.img3,.m41,.m42,.m43{
+                float: left;               
+                width: 360px;
+                height: 270px;
+                text-align: center;
+                margin-left: 30px;
+                position: relative;
+            }
+            .m44,.m45,.m46,.m47,.m48,.m49{
+                float: left;               
+                width: 360px;
+                height: 270px;
+                text-align: center;
+                margin-left: 30px;
+                margin-top: 30px;
+                position: relative;
+            }            
+            .f1,.f2,.f3,.f41,.f42,.f43,.f44,.f45,.f46,.f47,.f48,.f49{
+                width: 360px;
+                height: 100px;
+                color: #FFFFFF;
+                background-color: rgba(5,5,15,0);
+                position: absolute;
+                bottom: 0px;
+                text-align: center;
+            }
+            .img1 img,.img2 img,.img3 img,.m41 img,.m42 img,.m43 img,.m44 img,.m45 img,.m46 img,.m47 img,.m48 img,.m49 img{
+                float: left;
+                width: 360px;
+                height: 270px;
+            }
+            .img1:hover .f1,.img2:hover .f2,.img3:hover .f3,.m41:hover .f41,.m42:hover .f42,.m43:hover .f43,.m44:hover .f44,.m45:hover .f45,.m46:hover .f46,.m47:hover .f47,.m48:hover .f48,.m49:hover .f49{
+                width: 360px;
+                height: 270px;
+                background-color: rgba(100,100,100,0.9);
+                margin: 0px auto;
+            }
+            .img1:hover .f1 h1,.img2:hover .f2 h1,.img3:hover .f3 h1,.m41:hover .f41 h1,.m42:hover .f42 h1,.m43:hover .f43 h1,.m44:hover .f44 h1,.m45:hover .f45 h1,.m46:hover .f46 h1,.m47:hover .f47 h1,.m48:hover .f48 h1,.m49:hover .f49 h1{
+                text-align: center;
+                margin-top: 90px;
+            }
+            .img1:hover .f1 h3,.img2:hover .f2 h3,.img3:hover .f3 h3,.m41:hover .f41 h3,.m42:hover .f42 h3,.m43:hover .f43 h3,.m44:hover .f44 h3,.m45:hover .f45 h3,.m46:hover .f46 h3,.m47:hover .f47 h3,.m48:hover .f48 h3,.m49:hover .f49 h3{
+                text-align: center;
+                margin-top: 10px;
+            }
+            
+            #mid3{
+                height: 200px;
+                width: 1200px;
+                border-top: 1px solid rgba(100,100,100,0.9);         
+                border-bottom: 1px solid rgba(100,100,100,0.9);
+            }
+            #mid31{
+                width: 200px;
+                height: 40px;
+                margin-left: 30px;
+                margin-top: 30px;
+            }
+            #m1,#m2,#m3{
+                float: left;               
+                width: 360px;
+                height: 100px;
+                text-align: center;
+                margin-left: 30px;
+                position: relative;
+            }
+
+            #mid4{
+                width:1200px;
+                height: 960px;
+            }
+            #mid41{
+                width: 200px;
+                height: 40px;
+                margin-left: 30px;
+                margin-top: 30px;
+            }
+            #mid42{
+                width:1200px;
+                height: 920px;
+                margin-top: 10px;
+            }
+            #inp1{
+                border: 0;
+                border-right: 1px solid;
+                margin-top: 5px;
+                font-size: 20px;
+                color: #ccc;
+                width: 230px;
+                height: 50px;
+            }
+            #inp2{
+                border: 0;
+                height: 50px;
+                border-right: 1px solid;
+                margin-top: 5px;
+                font-size: 20px;
+                color: #ccc;
+            }
+            select{
+                width: 180px;
+                padding: 10px 30px;
+                border: 0;
+                height: 50px;
+                color: #ccc;
+                font-size: 15px;
+            }
+            #t1 #right1{
+                display: inline-block;
+                margin: 10px;
+                font-size: 18px;                
+                float: right;
+            }
+            #t1 #right1 a{
+                text-decoration:none;
+                margin: 3px;
+                color: #fff;
+            }
+            #bottom{
+                height: 210px;
+                background-color: #2e2e2e;
+                color: #fff;
+            }
+            .f_top{
+                color: #FF8C00;
+                margin: 0px 150px 0px 150px;
+                border-bottom: 1px solid #FFA500;
+            }
+            .f_mid{
+                text-align: center;
+                line-height: 37px;
+                padding-top: 10px;
+                font-size: 15px;
+            }
+            .f_bottom{
+                text-align: center;
+                line-height: 27px;
+                font-size: 10px;
+            }
+            .topl{
+                display: inline-block;
+                padding-right: 200px;
+            }
+            .toplm{
+                display: inline-block;
+                }
+            #top1{
+                font-size: 20px;
+                margin: 10px 0px 10px 0px;
+            }
+            .top2{
+                font-size: 15px;
+                margin: 10px 0px 10px 0px;
+            }
+            .side{
+                position: fixed;
+                bottom: 10px;
+                right: 10px;
+                background-color: rgba(0, 0, 0, 0.6);
+                width: 50px;
+            }
+            .sider{
+                height: 45px;
+                width: 35px;
+                border-bottom: 1.5px solid #606260;
+                margin: 10px 5px 5px 8px;
+            }
+        </style>
+        <script>
+            function getStyle(obj, attr){
+                if(obj.currentStyle){
+                    return obj.currentStyle[attr];
+                } else {
+                    return getComputedStyle(obj, null)[attr];
+                }
+            }
+            function animate(obj,json,callback){
+                clearInterval(obj.timer);
+                obj.timer = setInterval(function(){
+                    var isStop = true;
+                    for(var attr in json){
+                        var now = 0;
+                        if(attr == 'opacity'){
+                            now = parseInt(getStyle(obj,attr)*100);
+                        }else{
+                            now = parseInt(getStyle(obj,attr));
+                        }
+                        var speed = (json[attr] - now) / 8;
+                        speed = speed>0?Math.ceil(speed):Math.floor(speed);
+                        var cur = now + speed;
+                        if(attr == 'opacity'){
+                            obj.style[attr] = cur / 100;
+                        }else{
+                            obj.style[attr] = cur + 'px';
+                        }
+                        if(json[attr] !== cur){
+                            isStop = false;
+                        }
+                    }
+                    if(isStop){
+                        clearInterval(obj.timer);
+                        callback&&callback();
+                    }
+                }, 30)
+            }
+        </script>
+    </head>
+    <body>
+        <div id="top">
+            <div id="t1">
+                <img src="img/biao.png" width="55px" height="50px">
+                <div id="biao">从心预定</div>
+                <div id="right1">
+                    <a href="index.html">首页</a>
+                    <a href="">租车</a>
+                    <a href="">观光和活动</a>
+                    <a href="login-0.html">登录</a>
+                    <a href="login-2.html">注册</a>
+                    <a href="">帮助</a>
+                </div>
+            </div>
+            <div id="t2">
+                <div class = "slider" id = "slider">
+                    <div class = "slide"><img src = "img/55.jpg" alt = " "></div>
+                    <div class = "slide"><img src = "img/11.jpg" alt = " "></div>
+                    <div class = "slide"><img src = "img/22.jpg" alt = " "></div>
+                    <div class = "slide"><img src = "img/33.jpg" alt = " "></div>
+                    <div class = "slide"><img src = "img/444.jpg" alt = " "></div>
+                    <div class = "slide"><img src = "img/55.jpg" alt = " "></div>
+                    <div class = "slide"><img src = "img/11.jpg" alt = " "></div>
+                </div>
+                <span id = "left"> < </span>
+                <span id = "right"> > </span>
+                <ul class = "nav" id = "nav">
+                    <li class = "active">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="mid">
+            <div id = "mid1">
+                <div id = "mid11">
+                    <h2>热门目的地</h2>
+                </div>
+            </div>
+            <div id = "mid2">
+                <div class="img1">
+                    <img src="img/img1.jpg">
+                    <div class="f1">
+                        <h1>阿姆斯特丹</h1><br/><h3>51项-></h3>
+                    </div>
+                </div>
+                <div class="img2">
+                    <img src="img/img2.jpg"/>
+                    <div class="f2">
+                        <h1>维也纳</h1><br/><h3>39项-></h3>
+                    </div>
+                </div>
+                <div class="img3">
+                    <a href = "demo.html"><img src="img/img3.jpg"/></a>
+                    <div class="f3">
+                        <h1>伦敦</h1><br/><h3>64项-></h3>
+                    </div>
+                </div>
+            </div>
+            <div id = "mid3">
+                <div id = "mid31">
+                    <h2>找我们就对了</h2>
+                </div>
+                <div id = "mid32">
+                    <div id = "m1">
+                        <img src = "img/m1.png"/>
+                        <h4>便捷又灵活</h4>
+                        <p>随时随地计划行程，获得即时确认和电子门票</p>
+                    </div>
+                    <div id = "m2">
+                        <img src = "img/m2.png"/>
+                        <h4>真实游客点评</h4>
+                        <p>探索玩乐精华，参考真人评论</p>
+                    </div>
+                    <div id = "m3">
+                        <img src = "img/m3.png"/>
+                        <h4>贴心客服支持</h4>
+                        <p>客服团队全天候提供帮助</p>
+                    </div>
+                </div>
+            </div>
+            <div id = "mid4">
+                <div id = "mid41">
+                    <h2>探索更多目的地</h2>
+                </div>
+                <div id = "mid42">
+                    <div class="m41">
+                        <img src="img/41.jpg">
+                        <div class="f41">
+                            <h1>布拉格</h1><br/><h4>23项-></h4>
+                        </div>
+                    </div>
+                    <div class="m42">
+                        <img src="img/42.jpg"/>
+                        <div class="f42">
+                            <h1>罗马</h1><br/><h4>46项-></h4>
+                        </div>
+                    </div>
+                    <div class="m43">
+                        <img src="img/43.jpg"/>
+                        <div class="f43">
+                            <h1>巴黎</h1><br/><h4>37项-></h4>
+                        </div>
+                    </div>
+                    <div class="m44">
+                        <img src="img/44.jpg"/>
+                        <div class="f44">
+                            <h1>柏林</h1><br/><h4>42项-></h4>
+                        </div>
+                    </div>
+                    <div class="m45">
+                        <img src="img/45.jpg"/>
+                        <div class="f45">
+                            <h1>米兰</h1><br/><h4>35项-></h4>
+                        </div>
+                    </div>
+                    <div class="m46">
+                        <img src="img/46.jpg"/>
+                        <div class="f46">
+                            <h1>新加坡</h1><br/><h4>53项-></h4>
+                        </div>
+                    </div>
+                    <div class="m47">
+                        <img src="img/47.jpg"/>
+                        <div class="f47">
+                            <h1>雅典</h1><br/><h4>21项-></h4>
+                        </div>
+                    </div>
+                    <div class="m48">
+                        <img src="img/48.jpg"/>
+                        <div class="f48">
+                            <h1>圣托里尼</h1><br/><h4>27项-></h4>
+                        </div>
+                    </div>
+                    <div class="m49">
+                        <img src="img/49.jpg"/>
+                        <div class="f49">
+                            <h1>威尼斯</h1><br/><h4>41项-></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="bottom">
+            <div class="f_top">
+                <div class="topl">
+                    <div id="top1">国家/地区</div>
+                    <div class="top2">区域</div>
+                    <div class="top2">城市</div>
+                    <div class="top2">景点</div>
+                </div>
+                <div class="topl">
+                    <div id="top1">公寓</div>
+                    <div class="top2">别墅</div>
+                    <div class="top2">青旅</div>
+                    <div class="top2">度假村</div>
+                </div>
+                <div class="topl">
+                    <div id="top1">租车服务</div>
+                    <div class="top2">订机票</div>
+                    <div class="top2">餐厅定位</div>
+                    <div class="top2">周边景点</div>
+                </div>
+                <div class="topl">
+                    <div id="top1">论坛</div>
+                    <div class="top2">客人点评</div>
+                    <div class="top2">游记攻略</div>
+                    <div class="top2">旅人分享</div>
+                </div>
+                <div class="toplm">
+                    <div id="top1">关于我们</div>
+                    <div class="top2">网站故障报告</div>
+                    <div class="top2">联系我们</div>
+                    <div class="top2">投诉与建议</div>
+                </div>
+            </div>
+            <div class="f_mid">
+                首页&nbsp;&nbsp;|&nbsp;&nbsp;国家地区&nbsp;&nbsp;|&nbsp;&nbsp;
+                租车订票&nbsp;&nbsp;|&nbsp;&nbsp;客服帮助&nbsp;&nbsp;|&nbsp;&nbsp;
+                同行玩乐&nbsp;&nbsp;|&nbsp;&nbsp;旅行基金&nbsp;&nbsp;|&nbsp;&nbsp;
+                法律服务&nbsp;&nbsp;|&nbsp;&nbsp;友情链接
+            </div>
+            <div class="f_bottom">
+                2019-2020&nbsp;从心预定有限公司&nbsp;版权所有
+            </div>
+        </div>
+        <div class="side">
+                <div class="sider"><a href=""><img src="img/cart1.png"></a></div>
+                <div class="sider"><a href=""><img src="img/qq.png"></a></div>
+                <div class="sider"><a href=""><img src="img/zuji.png"></a></div>
+                <div class="sider"><a href=""><img src="img/erweima.png"></a></div>
+                <div class="sider"><a href=""><img src="img/gotop.png"></a></div>
+        </div>
+    </body>
+    <script type="text/javascript">
+        var t2 = document.getElementById("t2");
+        var list = document.getElementById("nav").children;
+        var slider = document.getElementById("slider");
+        var left = document.getElementById("left");
+        var right = document.getElementById("right");
+
+        var index = 1;
+        var timer;
+        var isMoving = false;
+
+        function next(){
+            if(isMoving){
+                return;
+            }
+            isMoving = true;
+            index++;
+            navMove();
+            animate(slider,{left:-1519*index},function(){
+                if(index == 6){
+                    slider.style.left = "-1519px";
+                    index = 1;
+                }
+                isMoving = false;
+            });
+        }
+
+        function prev(){
+            if(isMoving){
+                return;
+            }
+            isMoving = true;
+            index--;
+            navMove();
+            animate(slider,{left:-1519*index},function(){
+                if(index == 0){
+                    slider.style.left = "-7595px";
+                    index = 5;
+                }
+                isMoving = false;
+            });
+        }
+
+        right.onclick = next;
+        left.onclick = prev;
+
+        for(var i = 0;i < list.length;i++){
+            list[i].index = i;
+            list[i].onclick = function(){
+                index = this.index + 1;
+                navMove();
+                animate(slider,{left:-1519*index});
+            }
+        }
+        
+        function navMove(){
+            for(var i = 0;i<list.length;i++){
+                list[i].className = "";
+            }
+            if(index > 5){
+                list[0].className = "active";
+            }else if(index <= 0){
+                list[4].className = "active";
+            }else{
+                list[index-1].className = "active";
+            }
+        }
+        
+        timer = setInterval(next,3000);
+        box.onmouseover = function(){
+            animate(left,{opacity:50})
+            animate(right,{opacity:50})
+            clearInterval(timer);
+        }
+        box.onmouseout = function(){
+            animate(left,{opacity:0})
+            animate(right,{opacity:0})
+            timer = setInterval(next, 3000);
+        }
+    </script>
+
+</html>
