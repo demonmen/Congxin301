@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>login</title>
+	<style>
+	body{
+		background: url(imgs/back.jpg);
+		background-size: cover;
+	}
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box{
+			width: 400px;
+			height: 400px;
+			padding: 0 20px;
+			border: 2px solid #1688ea;
+			margin: 50px auto;
+			background:url(imgs/biao.png); 
+			background-size: cover;
+		}
+		.tit{
+			margin-top: 5px;
+			margin-bottom: 30px;
+		}
+		.biao{
+			height:5px;
+			font-weight:5px;
+		}
+		.brand{
+			color:#ff9900;
+			font-size: 18px;
+			margin-right: 20px;
+		}
+		.inp{
+			width: 100%;
+			height: 40px;
+			text-indent: 8px;
+		}
+		.notice{
+			height: 30px;
+			line-height: 30px;
+			font-size: 12px;
+		}
+
+		.code{
+			width: 60%;
+		}
+		.getCode{
+			width: 35%;
+			height: 44px;
+			float: right;
+			border: none;
+			background-color: #ff9900;
+		}
+		.codeImg{
+			height: 40px;
+		}
+		.btn{
+			background: #ff9900;
+			width: 100%;
+			height: 40px;
+			border: none;
+			margin-top: 8px;
+			color: #fff;
+			border-radius: 3px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<p class="tit">
+			<span class="brand">用户注册</span>
+		</p>
+
+		<input class="inp" type="text" placeholder="手机号码:">
+		<p class="notice" id = "notice1"></p>
+
+        <div>
+			<input class="inp code" id = "inpcode" type="text" placeholder="验证码">
+			<button class="getCode" id = "getCode">获取验证码</button>
+		</div>
+		<p class="notice" id = "notice2"></p>
+		<div class="codeImg">
+		</div>
+		
+		<input class="inp" type="password" placeholder="密码">
+		<p class="notice" id = "notice3"></p>
+         
+		<input type="checkbox" checked>同意从心家的《服务协议》和《隐私保护》
+		<button class="btn">注册</button>
+	</div>
+</body>
+<script>
+
+		var inp1 = document.getElementsByClassName("inp")[0];
+        var inp2 = document.getElementsByClassName("inp")[2];
+        var getCode = document.getElementById("getCode");
+        var inpcode = document.getElementById("inpcode");
+        var notice1 = document.getElementById("notice1");
+        var notice2 = document.getElementById("notice2");
+        var notice3 = document.getElementById("notice3");
+        var codeImg = document.getElementsByClassName("codeImg")[0];
+        var btn = document.getElementsByClassName("btn")[0];
+        inp1.onfocus = function(){
+        	notice1.innerHTML = "请输入正确的手机号码";
+        }
+        inp1.onblur = function(){
+        	notice1.innerHTML = "";
+        }
+        inp2.onfocus= function(){
+        	notice3.innerHTML = "请输入6-12位密码";
+        }
+        inp2.onblur = function(){
+        	notice3.innerHTML = "";
+        }
+        var arr = ["image/zAZfB.jpg","image/ZEhUN.jpg","image/zFC9H.jpg","image/zhWY9.jpg","image/Zin4c.jpg","image/ZITGj.jpg","image/zj6iV.jpg","image/zjsKP.jpg","image/ZKc9S.jpg","image/zkDXU.jpg"];
+        var img = document.createElement("img");
+        var a;
+        getCode.onclick = function(){
+            var num = Math.floor(Math.random()*10);
+            a = arr[num];
+            img.src = arr[num];
+            codeImg.appendChild(img);
+        }
+        btn.onclick = function(){
+        	console.log(inpcode.value);
+        	console.log(a.slice(6,11));
+            if(10 > inp1.value.length || inp1.value.length > 11){
+        	    notice1.innerHTML = "手机号码不对";
+            }
+            
+            if(6 > inp2.value.length ||inp2.value.length > 12){
+        	    notice2.innerHTML = "密码位数不对";
+            }
+            if(inpcode.value!=a.slice(6,11) || inpcode.value == ""){
+                notice3.innerHTML = "验证码不对";
+            }
+            else{
+              	alert("注册成功，请回主页登录");
+            }
+                
+        }
+</script>
+
+</html>
